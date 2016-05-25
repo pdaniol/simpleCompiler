@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/simplecompiler.iml" filepath="$PROJECT_DIR$/simplecompiler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/run-environment.iml" filepath="$PROJECT_DIR$/run-environment.iml" />
     </modules>
   </component>
 </project>

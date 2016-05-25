@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="run-environment:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/run_environment_jar</output-path>
+    <root id="archive" name="run-environment.jar">
+      <element id="module-output" name="run-environment" />
+    </root>
+  </artifact>
+</component>
