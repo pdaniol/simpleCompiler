@@ -17,7 +17,6 @@ public class MainClass {
         String userInput=scanner.nextLine();
         List<Token> tokens;
 
-
         if(!Tokenizer.checkInput(userInput))
             System.out.println("wrong input!");
         else {

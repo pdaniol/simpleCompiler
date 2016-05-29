@@ -8,6 +8,8 @@ import java.util.Optional;
 public class Token {
 
     public enum TokenType{
+        OPPAREN,
+        CLPAREN,
         EOF,
         NUMBER,
         ADD,

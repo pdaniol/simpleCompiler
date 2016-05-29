@@ -24,6 +24,7 @@ public class Parser {
             lastTokenIndex++;
         return result;
     }
+
     private void restoreLastToken(){
             lastTokenIndex--;
 
@@ -32,25 +33,28 @@ public class Parser {
     public ParserTreeNode parseTerm(){
         Token nextToken = getNextToken();
         ParserTreeNode rootNode = null;
-        if(nextToken.getTokenType()!= Token.TokenType.EOF){
-        rootNode = new ParserTreeNode(nextToken);}
+        if (nextToken.getTokenType()!= Token.TokenType.EOF) {
+            rootNode = new ParserTreeNode(nextToken);
+        }
         return rootNode;
 
     }
+
     public ParserTreeNode parseAdd(){
         ParserTreeNode rootNode = parseMult();
         Token nextToken = getNextToken();
-        if(nextToken.getTokenType()!= Token.TokenType.EOF){
+        if (nextToken.getTokenType()!= Token.TokenType.EOF){
 
-        while(nextToken.getTokenType()== Token.TokenType.ADD){
-            ParserTreeNode newRootNode = new ParserTreeNode(nextToken);
-            newRootNode.setLeftTree(rootNode);
-            newRootNode.setRightTree(parseMult());
-            rootNode=newRootNode;
-            nextToken = getNextToken();
+            while(nextToken.getTokenType()== Token.TokenType.ADD){
+                ParserTreeNode newRootNode = new ParserTreeNode(nextToken);
+                newRootNode.setLeftTree(rootNode);
+                newRootNode.setRightTree(parseMult());
+                rootNode=newRootNode;
+                nextToken = getNextToken();
+            }
+
+            restoreLastToken();
         }
-
-        restoreLastToken();}
 
         return rootNode;
     }
@@ -70,8 +74,6 @@ public class Parser {
             restoreLastToken();
         }
         return rootNode;
-
-
     }
 
 }
