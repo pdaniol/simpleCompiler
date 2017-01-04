@@ -1,6 +1,0 @@
-Korzystając z Javy naturalnym wydaje się tworzenie aplikacji z wykorzystaniem paradygmatu obiektowego. Zgodnie z zasadą Pojedyńczej odpowiedzialności  \footnote{Single responsibility principle},  jednej z pięciu wymienionych przez SOLID, każdy obiekt powinien wykonywać tylko jedno zadanie. Niektóre funkcjonalności jednak (np. Autoryzacja i uwierzytelnianie oraz zarządzanie błedami) są powtarzane w kilku miejscach programu. Aby ograniczyć ilośc kodu potrzebnego do obsłużenia tych samych zadań w różnych miejscach programu do akcji wkraczją Aspekty.
-Spring AOP\footnote{Aspect-Oriented programming} jest to moduł, który dostarcza funkcjonalności charakterystycznych dla programowania aspektowego. Charakterystycznymi pojeciami dla tego terminu są: 
-- porada (advice) – implementacja kodu, który zostanie wstrzyknięty w zdefiniowane miejsce
-- punkt złączenia – jest to punkt w aplikacji, w który może zostać wpięty aspekt
-- punkt przecięcia – zawężają one ilość punktów złączenia, dla których zastosowany będzie aspekt
-
